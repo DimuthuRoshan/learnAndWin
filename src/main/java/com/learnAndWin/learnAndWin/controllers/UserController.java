@@ -13,7 +13,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "http://localhost:3000","http://localhost:81")
     @GetMapping
     public List<User> getUserList() {
         return userRepository.findAll();
